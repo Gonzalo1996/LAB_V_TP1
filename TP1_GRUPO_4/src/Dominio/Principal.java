@@ -14,8 +14,12 @@ public class Principal {
 		
 		Banda b = new Banda(1,"Los piojos");
 		Genero g = new Genero(1, "Rock");
+		
 		Recital recital = new Recital(b,g,"La renga");
+		Recital recital2 = new Recital(b,g);
+		
 		System.out.println(recital.toString());
+		System.out.println(recital2.toString());
 		
 		GeneroTeatro generoA = new GeneroTeatro(1, "terror");
 		Actores actorA = new Actores(1, "Facundo Arana");

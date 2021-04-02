@@ -11,12 +11,14 @@ public class Recital {
 	private static int contId = 0;
 	
 	public Recital() {
-		this.id = contId + 1; 
+		contId ++;
+		this.id = contId;
 	}
 
 	
 	public Recital(Banda banda, Genero genero, String bandaSoporte, String bandaSoporte2) {
-		this.id = contId + 1; 
+		contId ++;
+		this.id = contId;
 		this.banda = banda;
 		this.genero = genero;
 		this.bandaSoporte = bandaSoporte;
@@ -24,7 +26,8 @@ public class Recital {
 	}
 	
 	public Recital(Banda banda, Genero genero, String bandaSoporte) {
-		this.id = contId + 1; 
+		contId ++;
+		this.id = contId;
 		this.banda = banda;
 		this.genero = genero;
 		this.bandaSoporte = bandaSoporte;
