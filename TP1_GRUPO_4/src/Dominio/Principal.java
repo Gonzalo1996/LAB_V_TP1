@@ -16,7 +16,7 @@ public class Principal {
 		Genero g = new Genero(1, "Rock");
 		
 		Recital recital = new Recital(b,g,"La renga");
-		Recital recital2 = new Recital(b,g);
+		Recital recital2 = new Recital(b,g,"Los gardelitos");
 		
 		System.out.println(recital.toString());
 		System.out.println(recital2.toString());
