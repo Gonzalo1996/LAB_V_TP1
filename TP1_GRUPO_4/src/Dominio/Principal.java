@@ -1,6 +1,7 @@
 package Dominio;
 
 import Entrada.Entrada;
+import Infantil.Infantil;
 import Recital.Banda;
 import Recital.Genero;
 import Recital.Recital;
@@ -25,12 +26,14 @@ public class Principal {
 		GeneroTeatro generoA = new GeneroTeatro(1, "terror");
 		Actores actorA = new Actores(1, "Facundo Arana");
 		
-		Teatro teatroA = new Teatro("Gran rex", generoA, actorA, actorA, actorA);
+		Teatro teatroA = new Teatro("Gran Rex", generoA, actorA, actorA, actorA);
 		Teatro teatroB = new Teatro("Luna Park", generoA, actorA, actorA, actorA);		
 		
 		System.out.println(teatroA.toString());
 		System.out.println(teatroB.toString());
 		
+			Infantil niño1 = new Infantil(9,true);
+			System.out.println(niño1.toString());
 
 		// Test clase Entrada
 		
