@@ -1,5 +1,6 @@
 package Dominio;
 
+import Entrada.Entrada;
 import Recital.Banda;
 import Recital.Genero;
 import Recital.Recital;
@@ -30,8 +31,16 @@ public class Principal {
 		System.out.println(teatroA.toString());
 		System.out.println(teatroB.toString());
 		
+
+		// Test clase Entrada
 		
+		recital.setNombre("La renga en vivo");
+		teatroA.setNombre("El terror");
 		
+		Entrada entrada = new Entrada(recital, 3999.99);
+		Entrada entrada2 = new Entrada(teatroA, 499.99);
 		
+		System.out.println(entrada.toString());
+		System.out.println(entrada2.toString());
 	}
 }

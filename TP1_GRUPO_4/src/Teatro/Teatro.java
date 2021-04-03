@@ -1,6 +1,8 @@
 package Teatro;
 
-public class Teatro {
+import Entrada.Evento;
+
+public class Teatro extends Evento {
 	
 	private int id;
 	private String nombre;
@@ -13,12 +15,14 @@ public class Teatro {
 /*<------------CONSTRUCTORES-------------------->*/	
 	
 	public Teatro() {
+		super("Teatro");
 		contId++;
 		this.id = contId;
 		this.nombre = "Sin nombre";
 	}
 	
 	public Teatro(String nombre, GeneroTeatro genero, Actores actorA, Actores actorB, Actores actorC) {
+		super("Teatro");
 		contId++;
 		this.id = contId;
 		this.nombre = nombre;
@@ -75,7 +79,7 @@ public class Teatro {
 
 	@Override
 	public String toString() {
-		return "ID teatro: " + id + ". Nombre: " + nombre + ". Genero: " + genero.getNombre() + ". Actores: " + actorA.getNombre() + "," + actorB.getNombre() + 
+		return super.toString() + " ID teatro: " + id + ". Nombre: " + nombre + ". Genero: " + genero.getNombre() + ". Actores: " + actorA.getNombre() + "," + actorB.getNombre() + 
 				"," + actorC.getNombre() + ".";
 	}	
 }

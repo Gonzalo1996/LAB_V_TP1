@@ -1,6 +1,8 @@
 package Recital;
 
-public class Recital {
+import Entrada.Evento;
+
+public class Recital extends Evento {
 	
 	private int id;
 	private Banda banda;
@@ -11,12 +13,14 @@ public class Recital {
 	private static int contId = 0;
 	
 	public Recital() {
+		super("Recital");
 		contId ++;
 		this.id = contId;
 	}
 
 	
 	public Recital(Banda banda, Genero genero, String bandaSoporte, String bandaSoporte2) {
+		super("Recital");
 		contId ++;
 		this.id = contId;
 		this.banda = banda;
@@ -26,6 +30,7 @@ public class Recital {
 	}
 	
 	public Recital(Banda banda, Genero genero, String bandaSoporte) {
+		super("Recital");
 		contId ++;
 		this.id = contId;
 		this.banda = banda;
@@ -72,7 +77,7 @@ public class Recital {
 
 	@Override
 	public String toString() {
-		return "ID recital: " + id  + " Banda: " + banda.getNombre() + " Genero: " + genero.getNombre() +
+		return super.toString() + " ID recital: " + id  + " Banda: " + banda.getNombre() + " Genero: " + genero.getNombre() +
 				" Banda Soporte: " + bandaSoporte + " Soporte 2 :" + bandaSoporte2;
 	}
 }
