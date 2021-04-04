@@ -1,5 +1,7 @@
 package Dominio;
 
+import Deportes.Deportes;
+import Deportes.DeportesTipo;
 import Entrada.Entrada;
 import Infantil.Infantil;
 import Recital.Banda;
@@ -35,6 +37,21 @@ public class Principal {
 			Infantil niño1 = new Infantil(10,true);
 			System.out.println(niño1.toString());
 
+			
+			
+		DeportesTipo tipodep1 = new DeportesTipo(1,"Futbol");	
+		DeportesTipo tipodep2 = new DeportesTipo(2,"Rugby");	
+		DeportesTipo tipodep3 = new DeportesTipo(3,"Hockey");	
+		Deportes depo1 = new Deportes(tipodep1,false);	
+		Deportes depo2 = new Deportes(tipodep2,true);
+		Deportes depo3 = new Deportes(tipodep3);
+		
+		
+		System.out.println(depo1.toString());
+		System.out.println(depo2.toString());
+		System.out.println(depo3.toString());
+		
+			
 		// Test clase Entrada
 		
 		recital.setNombre("La renga en vivo");
