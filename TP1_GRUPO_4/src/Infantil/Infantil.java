@@ -59,6 +59,6 @@ public class Infantil extends Evento {
 	
 	@Override
 	public String toString() {
-		return super.toString() + " ID infantil: " + id  + " Edad: " + edad;
+		return super.toString() + " ID infantil: " + id + " Edad: " + edad;
 	}
 }

@@ -32,7 +32,7 @@ public class Principal {
 		System.out.println(teatroA.toString());
 		System.out.println(teatroB.toString());
 		
-			Infantil niño1 = new Infantil(9,true);
+			Infantil niño1 = new Infantil(10,true);
 			System.out.println(niño1.toString());
 
 		// Test clase Entrada
