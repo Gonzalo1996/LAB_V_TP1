@@ -3,22 +3,24 @@ package Deportes;
 public class DeportesTipo {
 	
 	private int id;
+	private static int contId = 0;
 	private String Nombre;
-
-	
+	private double precio; 
 	
 	//Constructores
 	public DeportesTipo() {
-		this.id=1;
+		contId ++;
+		this.id = contId;
 		this.Nombre="Sin nombre";
 	}
 	
-	public DeportesTipo(int id, String nombre) {
-		this.id=id;
+	public DeportesTipo(String nombre, double precio) {
+		contId ++;
+		this.id = contId;
 		this.Nombre=nombre;
+		this.precio = precio;
 	}
 
-	
 	// Getter y Setters
 	public int getId() {
 		return id;
@@ -36,17 +38,18 @@ public class DeportesTipo {
 		Nombre = nombre;
 	}
 
-	
+	public double getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(double precio) {
+		this.precio = precio;
+	}
+
 	// Metodo ToString
 	@Override
 	public String toString() {
-		return "DeportesTipo [id=" + id + ", Nombre=" + Nombre + "]";
+		return "DeportesTipo [id=" + id + ", Nombre=" + Nombre +" Precio: $"+ precio;
 	}
 
-	
-	
-	
-	
-	
-	
 }

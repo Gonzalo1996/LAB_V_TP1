@@ -2,7 +2,7 @@ package Teatro;
 
 import Entrada.Evento;
 
-public class Teatro extends Evento {
+public class Teatro extends Evento{
 	
 	private int id;
 	private String nombre;
@@ -11,6 +11,7 @@ public class Teatro extends Evento {
 	private Actores actorB;
 	private Actores actorC;
 	private static int contId = 0;
+	private final double precio = 1350.50;
 	
 /*<------------CONSTRUCTORES-------------------->*/	
 	
@@ -30,6 +31,28 @@ public class Teatro extends Evento {
 		this.actorA = actorA;
 		this.actorB = actorB;
 		this.actorC = actorC;
+	}
+	
+	public Teatro(String nombre, GeneroTeatro genero, Actores actorA, Actores actorB) {
+		super("Teatro");
+		contId++;
+		this.id = contId;
+		this.nombre = nombre;
+		this.genero = genero;
+		this.actorA = actorA;
+		this.actorB = actorB;
+		actorC = new Actores();
+	}
+	
+	public Teatro(String nombre, GeneroTeatro genero, Actores actorA) {
+		super("Teatro");
+		contId++;
+		this.id = contId;
+		this.nombre = nombre;
+		this.genero = genero;
+		this.actorA = actorA;
+		actorB = new Actores();
+		actorC = new Actores();
 	}
 	
 /*<------------GETTERS AND SETTERS-------------->*/
@@ -77,9 +100,13 @@ public class Teatro extends Evento {
 		this.actorC = actorC;
 	}
 
+	public double getPrecio() {
+		return precio;
+	}
+
 	@Override
 	public String toString() {
-		return super.toString() + " ID teatro: " + id + ". Nombre: " + nombre + ". Genero: " + genero.getNombre() + ". Actores: " + actorA.getNombre() + "," + actorB.getNombre() + 
-				"," + actorC.getNombre() + ".";
+		return super.toString() + " ID teatro: " + id + ". Nombre: " + nombre + ". Genero: " + genero.getNombre()+ " Precio: $" + precio + ". Actor 1: " + actorA.getNombre()
+		+ ". Actor 2: " + actorB.getNombre() + ". Actor 3: " + actorC.getNombre();
 	}	
 }

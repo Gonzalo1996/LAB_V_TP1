@@ -10,14 +10,11 @@ public class Deportes extends Evento {
 	
 	private static int contId=0;
 	
-	
 	//Constructores
 	public Deportes() {
 		super("Deportes");
 		contId++;
-		this.id=contId;
-		
-		
+		this.id=contId;	
 	}
 	
 	public Deportes(DeportesTipo dep) {
@@ -28,12 +25,17 @@ public class Deportes extends Evento {
 		this.internacional=false;
 	}
 	
+	
 	public Deportes(DeportesTipo dep, boolean internacional) {
 		super("Deportes");
 		contId++;
 		this.id=contId;
 		this.dep=dep;
 		this.internacional=internacional;
+		
+		if(internacional) {
+			dep.setPrecio(dep.getPrecio() * 1.3);
+		}
 	}
 
 //Getters y Setters
@@ -80,10 +82,10 @@ public class Deportes extends Evento {
 	@Override
 	public String toString() {
 		if(internacional==true) {
-			return super.toString() + "ID de partido: " + id + ", Deporte: " + dep.getNombre() + ", Tipo de partido: " + "Internacional";
+			return super.toString() + "ID de partido: " + id + ", Deporte: " + dep.getNombre() + " Precio: $"+ dep.getPrecio() + ", Tipo de partido: " + "Internacional";
 	}
 		else {
-			return super.toString() + "ID de partido: " + id + ", Deporte: " + dep.getNombre().toString() + ", Tipo de partido: " + "Local";
+			return super.toString() + "ID de partido: " + id + ", Deporte: " + dep.getNombre().toString()+ " Precio: $"+ dep.getPrecio() + ", Tipo de partido: " + "Local";
 		}
 	}	
 	
