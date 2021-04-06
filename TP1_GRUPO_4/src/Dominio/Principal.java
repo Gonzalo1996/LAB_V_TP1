@@ -31,8 +31,9 @@ public class Principal {
 
 		//RECITAL
 		Banda b = new Banda(1,"Los piojos");
-		Genero g = new Genero(1, "Rock");		
-		Recital recital = new Recital(b,g, "La 25", null);	
+		Genero g = new Genero(1, "Rock");
+		Banda s1 = new Banda(2, "La 25");
+		Recital recital = new Recital(b,g, s1, null);
 		
 		//DEPORTES
 		DeportesTipo[] vecTipo = new DeportesTipo[3];
@@ -45,13 +46,13 @@ public class Principal {
 			//SETEO FECHAS Y MINUTOS
         Date fecha = new Date(121, 3,6, 20, 30);		
 		infantil.setFechahora(fecha);
-		infantil.setMinutos(100);	
+		infantil.setDuracion(100);	
 		depo1.setFechahora(fecha);
-		depo1.setMinutos(90);
+		depo1.setDuracion(90);
 		recital.setFechahora(fecha);
-		recital.setMinutos(30);
+		recital.setDuracion(30);
 		teatroA.setFechahora(fecha);
-		teatroA.setMinutos(45);
+		teatroA.setDuracion(45);
 		
 			//SETEO NOMBRE DE EVENTOS
 		infantil.setNombre("Panam y sus niños");

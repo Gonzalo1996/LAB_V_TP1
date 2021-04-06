@@ -7,8 +7,8 @@ public class Recital extends Evento{
 	private int id;
 	private Banda banda;
 	private Genero genero;
-	private String bandaSoporte;
-	private String bandaSoporte2;
+	private Banda bandaSoporte;
+	private Banda bandaSoporte2;
 
 	private static int contId = 0;
 	
@@ -18,27 +18,15 @@ public class Recital extends Evento{
 		this.id = contId;
 	}
 	
-		//EN CASO QUE NO TENGA BANDA SOPORTE
-	
-	public Recital(Banda banda, Genero genero) {
-		super("Recital");
-		contId ++;
-		this.id = contId;
-		this.banda = banda;
-		this.genero = genero;
-		this.bandaSoporte = "Sin banda soporte 1";
-		this.bandaSoporte2 = "Sin banda soporte 2";
-	}
-	
-	public Recital(Banda banda, Genero genero, String bandaSoporte, String bandaSoporte2) {
+	public Recital(Banda banda, Genero genero, Banda bandaSoporte, Banda bandaSoporte2) {
 		super("Recital");
 		contId ++;
 		this.id = contId;
 		this.banda = banda;
 		this.genero = genero;
 
-		this.bandaSoporte = bandaSoporte != null ? bandaSoporte : "Sin banda soporte 1";
-        this.bandaSoporte2 = bandaSoporte2 != null ? bandaSoporte2 : "Sin banda soporte 2";
+		this.bandaSoporte = bandaSoporte;
+        this.bandaSoporte2 = bandaSoporte2;
 	}
 
 	public int getId() {
@@ -59,28 +47,27 @@ public class Recital extends Evento{
 	public void setGenero(Genero genero) {
 		this.genero = genero;
 	}
-	
 
-	public String getBandaSoporte() {
+	public Banda getBandaSoporte() {
 		return bandaSoporte;
 	}
 
-	public void setBandaSoporte(String bandaSoporte) {
+	public void setBandaSoporte(Banda bandaSoporte) {
 		this.bandaSoporte = bandaSoporte;
 	}
 
-	public String getBandaSoporte2() {
+	public Banda getBandaSoporte2() {
 		return bandaSoporte2;
 	}
 
-	public void setBandaSoporte2(String bandaSoporte2) {
+	public void setBandaSoporte2(Banda bandaSoporte2) {
 		this.bandaSoporte2 = bandaSoporte2;
 	}
-	
 
 	@Override
 	public String toString() {
 		return super.toString() + " ID recital: " + id  + " Banda: " + banda.getNombre() + " Genero: " + genero.getNombre() +
-								  " Banda Soporte: " + bandaSoporte + " Soporte 2 :" + bandaSoporte2;
+								  " Banda Soporte: " + (bandaSoporte != null ? bandaSoporte.getNombre() : "Sin banda soporte 1") + 
+								  " Banda Soporte 2 :" + (bandaSoporte2 != null ? bandaSoporte2.getNombre() : "Sin banda soporte 2");
 	}
 }

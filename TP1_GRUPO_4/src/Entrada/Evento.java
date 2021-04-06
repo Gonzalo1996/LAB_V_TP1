@@ -13,11 +13,11 @@ public abstract class Evento {
 		this.tipoEvento = tipoEvento;
 	}
 
-	public Evento(String tipoEvento, String nombre, Date fechatexto, int minutos) {
+	public Evento(String tipoEvento, String nombre, Date fechahora, int duracion) {
 		this.tipoEvento = tipoEvento;
 		this.nombre = nombre;
-		this.fechahora = fechatexto;
-		this.duracion = minutos;
+		this.fechahora = fechahora;
+		this.duracion = duracion;
 	}
 	
 	public String getNombre() {
@@ -44,16 +44,16 @@ public abstract class Evento {
 		this.fechahora = fechahora;
 	}
 
-	public int getMinutos() {
+	public int getDuracion() {
 		return duracion;
 	}
 
-	public void setMinutos(int minutos) {
-		this.duracion = minutos;
+	public void setDuracion(int duracion) {
+		this.duracion = duracion;
 	}
 
 	@Override
 	public String toString() {
-		return MessageFormat.format("Nombre: {0}. Tipo de evento: {1}. Fecha y hora: {2}. Minutos: {3}.", nombre, tipoEvento, fechahora, duracion);
+		return MessageFormat.format("Nombre: {0}. Tipo de evento: {1}. Fecha y hora: {2}. Duración: {3} min.", nombre, tipoEvento, fechahora, duracion);
 	}
 }
