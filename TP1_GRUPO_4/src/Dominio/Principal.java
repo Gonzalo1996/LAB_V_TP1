@@ -50,18 +50,18 @@ public class Principal {
 		depo1.setMinutos(90);
 		recital.setFechahora(fecha);
 		recital.setMinutos(30);
-//		teatroA.setFechahora(fecha);
-//		teatroA.setMinutos(45);
+		teatroA.setFechahora(fecha);
+		teatroA.setMinutos(45);
 		
 			//SETEO NOMBRE DE EVENTOS
 		infantil.setNombre("Panam y sus niños");
 		recital.setNombre("Los piojos en vivo hoy");
 		depo1.setNombre("Superclasico");
-//		teatroA.setNombre("Casados con hijos en vivo");
+		teatroA.setNombre("Casados con hijos en vivo");
 			
 			//SETEO EVENTOS
 		Entrada entrada = new EntradaRecital(recital, true);
-//		Entrada entrada2 = new EntradaTeatro(teatroA);
+		Entrada entrada2 = new EntradaTeatro(teatroA);
 		Entrada entrada3 = new EntradaInfantil(infantil, 7);
 		Entrada entrada4 = new EntradaDeporte(depo1);
 		/*
@@ -70,7 +70,7 @@ public class Principal {
 		*/
 		
 		System.out.println(entrada.toString());
-//		System.out.println(entrada2.toString());
+		System.out.println(entrada2.toString());
 		System.out.println(entrada3.toString());
 		System.out.println(entrada4.toString());
 
