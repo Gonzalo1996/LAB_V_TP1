@@ -9,7 +9,6 @@ public class Recital extends Evento{
 	private Genero genero;
 	private String bandaSoporte;
 	private String bandaSoporte2;
-	private boolean entradavip;
 	private double precio;
 
 	private static int contId = 0;

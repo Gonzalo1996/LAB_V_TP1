@@ -28,7 +28,7 @@ public class Principal {
 		//RECITAL
 		Banda b = new Banda(1,"Los piojos");
 		Genero g = new Genero(1, "Rock");		
-			//TRUE es entrada VIP, FALSE es general. Si no ingresa ninguna es general pro defecto.
+			//TRUE es entrada VIP, FALSE es general. Si no ingresa ninguna es general por defecto.
 		Recital recital = new Recital(b,g,"La 25",true);	
 		
 		//DEPORTES
