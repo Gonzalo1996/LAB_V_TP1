@@ -76,6 +76,12 @@ public class Infantil extends Evento {
 
 	@Override
 	public String toString() {
-		return super.toString() + " ID infantil: " + id + " Edad: " + edad + " Precio: $" + precio;
+		if(this.sourvenir) {
+			return super.toString() + " ID infantil: " + id + " Edad: " + edad + " Precio: $" + precio + " CON SOUVENIR";
+		}
+		else {
+			return super.toString() + " ID infantil: " + id + " Edad: " + edad + " Precio: $" + precio + " SIN SOUVENIR";
+		}
+		
 	}
 }
