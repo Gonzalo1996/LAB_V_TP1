@@ -5,7 +5,6 @@ public class DeportesTipo {
 	private int id;
 	private static int contId = 0;
 	private String Nombre;
-	private double precio; 
 	
 	//Constructores
 	public DeportesTipo() {
@@ -14,11 +13,10 @@ public class DeportesTipo {
 		this.Nombre="Sin nombre";
 	}
 	
-	public DeportesTipo(String nombre, double precio) {
+	public DeportesTipo(String nombre) {
 		contId ++;
 		this.id = contId;
 		this.Nombre=nombre;
-		this.precio = precio;
 	}
 
 	// Getter y Setters
@@ -38,18 +36,10 @@ public class DeportesTipo {
 		Nombre = nombre;
 	}
 
-	public double getPrecio() {
-		return precio;
-	}
-
-	public void setPrecio(double precio) {
-		this.precio = precio;
-	}
-
 	// Metodo ToString
 	@Override
 	public String toString() {
-		return "DeportesTipo [id=" + id + ", Nombre=" + Nombre +" Precio: $"+ precio;
+		return "DeportesTipo [id=" + id + ", Nombre=" + Nombre;
 	}
 
 }

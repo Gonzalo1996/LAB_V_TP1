@@ -2,7 +2,7 @@ package Entrada;
 
 import java.text.MessageFormat;
 
-public class Entrada{
+public abstract class Entrada{
 	
 	private int id;
 	private Evento evento;
@@ -35,18 +35,11 @@ public class Entrada{
 		this.evento = evento;
 	}
 
-	public double getPrecio() {
-		return precio;
-	}
-
-	public void setPrecio(double precio) {
-		this.precio = precio;
-	}
+	public abstract double getPrecio();
 	
 	@Override
 	public String toString() {
-		//return MessageFormat.format("ID Entrada: {0}. Evento: ({1}). Precio: {2,number,currency}.", id, evento, precio);
-		return MessageFormat.format("ID Entrada: {0}. Evento: ({1}).", id, evento);
+		return MessageFormat.format("ID Entrada: {0}. Evento: ({1}). Precio: {2,number,currency}.", id, evento, getPrecio());
 
 	}
 }

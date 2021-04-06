@@ -3,7 +3,6 @@ import Entrada.Evento;
 
 public class Deportes extends Evento {
 
-	
 	private int id;
 	private DeportesTipo dep;
 	private boolean internacional;
@@ -32,10 +31,6 @@ public class Deportes extends Evento {
 		this.id=contId;
 		this.dep=dep;
 		this.internacional=internacional;
-		
-		if(internacional) {
-			dep.setPrecio(dep.getPrecio() * 1.3);
-		}
 	}
 
 //Getters y Setters
@@ -82,10 +77,10 @@ public class Deportes extends Evento {
 	@Override
 	public String toString() {
 		if(internacional==true) {
-			return super.toString() + "ID de partido: " + id + ", Deporte: " + dep.getNombre() + " Precio: $"+ dep.getPrecio() + ", Tipo de partido: " + "Internacional";
+			return super.toString() + "ID de partido: " + id + ", Deporte: " + dep.getNombre() + ", Tipo de partido: " + "Internacional";
 	}
 		else {
-			return super.toString() + "ID de partido: " + id + ", Deporte: " + dep.getNombre().toString()+ " Precio: $"+ dep.getPrecio() + ", Tipo de partido: " + "Local";
+			return super.toString() + "ID de partido: " + id + ", Deporte: " + dep.getNombre().toString() + ", Tipo de partido: " + "Local";
 		}
 	}	
 	

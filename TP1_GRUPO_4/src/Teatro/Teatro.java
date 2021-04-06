@@ -5,13 +5,12 @@ import Entrada.Evento;
 public class Teatro extends Evento{
 	
 	private int id;
-	private String nombre;
+	private String nombreTeatro;
 	private GeneroTeatro genero;
 	private Actores actorA;
 	private Actores actorB;
 	private Actores actorC;
 	private static int contId = 0;
-	private final double precio = 1350.50;
 	
 /*<------------CONSTRUCTORES-------------------->*/	
 	
@@ -19,41 +18,21 @@ public class Teatro extends Evento{
 		super("Teatro");
 		contId++;
 		this.id = contId;
-		this.nombre = "Sin nombre";
+		this.nombreTeatro = "Sin nombre";
 	}
 	
 	public Teatro(String nombre, GeneroTeatro genero, Actores actorA, Actores actorB, Actores actorC) {
 		super("Teatro");
 		contId++;
 		this.id = contId;
-		this.nombre = nombre;
+		this.nombreTeatro = nombre;
 		this.genero = genero;
 		this.actorA = actorA;
-		this.actorB = actorB;
-		this.actorC = actorC;
+		
+		this.actorB = actorB != null ? actorB : new Actores();
+		this.actorC = actorC != null ? actorC : new Actores();
 	}
 	
-	public Teatro(String nombre, GeneroTeatro genero, Actores actorA, Actores actorB) {
-		super("Teatro");
-		contId++;
-		this.id = contId;
-		this.nombre = nombre;
-		this.genero = genero;
-		this.actorA = actorA;
-		this.actorB = actorB;
-		actorC = new Actores();
-	}
-	
-	public Teatro(String nombre, GeneroTeatro genero, Actores actorA) {
-		super("Teatro");
-		contId++;
-		this.id = contId;
-		this.nombre = nombre;
-		this.genero = genero;
-		this.actorA = actorA;
-		actorB = new Actores();
-		actorC = new Actores();
-	}
 	
 /*<------------GETTERS AND SETTERS-------------->*/
 	
@@ -63,11 +42,11 @@ public class Teatro extends Evento{
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getNombre() {
-		return nombre;
+	public String getNombreTeatro() {
+		return nombreTeatro;
 	}
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
+	public void setNombreTeatro(String nombre) {
+		this.nombreTeatro = nombre;
 	}
 	public GeneroTeatro getGenero() {
 		return genero;
@@ -100,13 +79,9 @@ public class Teatro extends Evento{
 		this.actorC = actorC;
 	}
 
-	public double getPrecio() {
-		return precio;
-	}
-
 	@Override
 	public String toString() {
-		return super.toString() + " ID teatro: " + id + ". Nombre: " + nombre + ". Genero: " + genero.getNombre()+ " Precio: $" + precio + ". Actor 1: " + actorA.getNombre()
+		return super.toString() + " ID teatro: " + id + ". Nombre: " + nombreTeatro + ". Genero: " + genero.getNombre() + ". Actor 1: " + actorA.getNombre()
 		+ ". Actor 2: " + actorB.getNombre() + ". Actor 3: " + actorC.getNombre();
 	}	
 }

@@ -7,10 +7,8 @@ public class Infantil extends Evento {
 	/*<------------ATRIBUTOS-------------------->*/	
 	
 	private int id;
-	private int edad;
 	private boolean sourvenir;
 	private static int contId = 0;
-	private double precio;
 	
 	/*<------------CONSTRUCTORES-------------------->*/	
 	
@@ -18,24 +16,14 @@ public class Infantil extends Evento {
 		super("Infantil");
 		contId++;
 		this.id = contId;
-		this.edad = 8;
 		this.sourvenir = true;
-		this.precio = 250;
 	}
 	
-	public Infantil(int age, boolean sour) {
+	public Infantil(boolean sour) {
 		super("Infantil");
 		contId++;
 		this.id = contId;
-		this.edad=age;
 		this.sourvenir = sour;
-		
-		if(age >= 8) {
-			this.precio = 500;
-		}
-		else{
-			this.precio = 250;
-		}
 	}
 	
 	/*<------------GETTERS AND SETTERS-------------->*/
@@ -48,14 +36,6 @@ public class Infantil extends Evento {
 		this.id = id;
 	}
 
-	public int getEdad() {
-		return edad;
-	}
-
-	public void setEdad(int edad) {
-		this.edad = edad;
-	}
-
 	public boolean isSourvenir() {
 		return sourvenir;
 	}
@@ -64,23 +44,15 @@ public class Infantil extends Evento {
 		this.sourvenir = sourvenir;
 	}
 	
-	public double getPrecio() {
-		return precio;
-	}
-
-	public void setPrecio(double precio) {
-		this.precio = precio;
-	}	
-	
 	/*<------------TOSTRING()-------------->*/
 
 	@Override
 	public String toString() {
 		if(this.sourvenir) {
-			return super.toString() + " ID infantil: " + id + " Edad: " + edad + " Precio: $" + precio + " CON SOUVENIR";
+			return super.toString() + " ID infantil: " + id  + " CON SOUVENIR";
 		}
 		else {
-			return super.toString() + " ID infantil: " + id + " Edad: " + edad + " Precio: $" + precio + " SIN SOUVENIR";
+			return super.toString() + " ID infantil: " + id  + " SIN SOUVENIR";
 		}
 		
 	}
