@@ -31,19 +31,18 @@ public class Principal {
 		
 		//DEPORTES
 		DeportesTipo[] vecTipo = new DeportesTipo[3];
-		
 		vecTipo[0] = new DeportesTipo("Futbol",300);
 		vecTipo[1] = new DeportesTipo("Rugby",450);
 		vecTipo[2] = new DeportesTipo ("Hockey",380);
 
 		Deportes depo1 = new Deportes(vecTipo[2] ,true);	
 		
-		//SETEO NOMBRE DE EVENTOS
+			//SETEO NOMBRE DE EVENTOS
 		infantil.setNombre("Panam y sus niños");
 		recital.setNombre("Los piojos en vivo");	
 		depo1.setNombre("Superclasico");
 
-		//SETEO EVENTOS
+			//SETEO EVENTOS
 		Entrada entrada = new Entrada(recital);
 		Entrada entrada2 = new Entrada(teatroA);
 		Entrada entrada3 = new Entrada(depo1);

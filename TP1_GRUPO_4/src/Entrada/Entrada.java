@@ -17,7 +17,6 @@ public class Entrada{
 	public Entrada(Evento evento) {
 		this.id = ++contId;
 		this.evento = evento;
-		//this.precio = precio;
 	}
 
 	public int getId() {

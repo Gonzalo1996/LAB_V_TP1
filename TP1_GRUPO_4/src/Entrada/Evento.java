@@ -1,10 +1,12 @@
 package Entrada;
 
+import java.sql.Date;
 import java.text.MessageFormat;
 
 public abstract class Evento {
 	private String nombre;
 	private String tipoEvento;
+	private Date fecha;
 
 	public Evento(String tipoEvento) {
 		this.tipoEvento = tipoEvento;
