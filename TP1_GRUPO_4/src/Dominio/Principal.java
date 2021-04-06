@@ -1,5 +1,7 @@
 package Dominio;
 
+import java.util.Date;
+
 import Deportes.Deportes;
 import Deportes.DeportesTipo;
 import Entrada.Entrada;
@@ -37,11 +39,22 @@ public class Principal {
 
 		Deportes depo1 = new Deportes(vecTipo[2] ,true);	
 		
+			//SETEO FECHAS Y MINUTOS
+        Date fecha = new Date(121, 3,6, 20, 30);		
+		infantil.setFechahora(fecha);
+		infantil.setMinutos(100);	
+		depo1.setFechahora(fecha);
+		depo1.setMinutos(90);
+		recital.setFechahora(fecha);
+		recital.setMinutos(30);
+		teatroA.setFechahora(fecha);
+		teatroA.setMinutos(45);
+		
 			//SETEO NOMBRE DE EVENTOS
 		infantil.setNombre("Panam y sus niños");
 		recital.setNombre("Los piojos en vivo");	
 		depo1.setNombre("Superclasico");
-
+			
 			//SETEO EVENTOS
 		Entrada entrada = new Entrada(recital);
 		Entrada entrada2 = new Entrada(teatroA);
