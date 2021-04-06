@@ -6,7 +6,6 @@ public abstract class Entrada{
 	
 	private int id;
 	private Evento evento;
-	private double precio;
 
 	private static int contId = 0;
 	
